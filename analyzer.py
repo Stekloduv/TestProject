@@ -3,6 +3,7 @@ from transformers import pipeline
 
 sentiment_model = pipeline("sentiment-analysis", model="cardiffnlp/twitter-roberta-base-sentiment")
 
+
 def analyze_text(text):
     bad_phrases = [
         "не знаю", "чекайте", "мені байдуже", "що ви хочете", "не можу допомогти"

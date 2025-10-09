@@ -7,6 +7,7 @@ AUDIO_DIR = "audio"
 TRANSCRIPTS_DIR = "transcripts"
 RESULTS_FILE = "results.csv"
 
+
 def main():
     os.makedirs(TRANSCRIPTS_DIR, exist_ok=True)
 
@@ -36,6 +37,7 @@ def main():
     df = pd.DataFrame(results)
     df.to_csv(RESULTS_FILE, index=False, encoding="utf-8-sig")
     print("\n✅ Готово! Результати збережено у results.csv")
+
 
 if __name__ == "__main__":
     main()
