@@ -120,7 +120,7 @@ def analyze_text(text, threshold=80):
     """
     text_lower = text.lower()
 
-    # 1️⃣ Перевірка на небажані фрази
+    # 1️Перевірка на небажані фрази
     issues = [phrase for phrase in BAD_PHRASES if phrase.lower() in text_lower]
     rating = 10
     if issues:
@@ -129,7 +129,7 @@ def analyze_text(text, threshold=80):
     if issues:
         comment = f"\033[91m{comment}\033[0m"
 
-    # 2️⃣ Пошук типів робіт
+    # Пошук типів робіт
     found_work = []
     for work, keywords in WORK_TYPES.items():
         for kw in keywords:
